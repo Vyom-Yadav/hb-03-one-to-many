@@ -104,7 +104,8 @@ public class Instructor {
         }
 
         for (Course course : tempCourse) {
-            courses.add(course);
+            courses.add(course); // This is needed in adding objects as cascade type persist works on the list of courses, as
+            // we persist tempInstructor.
             course.setInstructor(this);
         }
 
